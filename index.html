@@ -3,62 +3,678 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Propostas de Sites Imobiliários</title>
+  <title>Soluções Imobiliárias Premium | RealBlackBoss</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
   <style>
-    body { font-family: Arial, sans-serif; background: #f4f4f4; margin: 0; padding: 0; }
-    .container { max-width: 960px; margin: 2rem auto; padding: 2rem; background: #fff; box-shadow: 0 0 10px rgba(0,0,0,0.1); border-radius: 10px; }
-    h1 { color: #2c3e50; margin-top: 0; }
-    .price { color: #27ae60; font-size: 1.5rem; font-weight: bold; }
-    img { width: 100%; border-radius: 8px; margin: 1rem 0; }
-    ul { line-height: 1.8; }
-    a { color: #2980b9; text-decoration: none; }
-    hr { margin: 3rem 0; border: none; border-top: 2px dashed #ccc; }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f8fafc;
+    }
+    
+    .font-montserrat {
+      font-family: 'Montserrat', sans-serif;
+    }
+    
+    .bg-gradient-primary {
+      background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+    }
+    
+    .bg-gradient-light {
+      background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+    }
+    
+    .shadow-premium {
+      box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    }
+    
+    .text-shadow {
+      text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    }
+    
+    .pricing-card:hover {
+      transform: translateY(-10px);
+      transition: all 0.3s ease;
+    }
+    
+    .hero-bg::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 500px;
+      background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+      z-index: -1;
+      border-radius: 0 0 50% 50%;
+      transform: scaleX(1.2);
+    }
+    
+    .faq-item.active .faq-answer {
+      display: block;
+    }
+    
+    .faq-item.active .faq-question i {
+      transform: rotate(180deg);
+    }
+    
+    .server-option {
+      transition: all 0.3s ease;
+    }
+    
+    .server-option:hover {
+      transform: scale(1.03);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    }
+    
+    .server-option.selected {
+      border-color: #3b82f6;
+      background-color: #eff6ff;
+    }
+    
+    /* Melhorias visuais para o título Premium de Elite */
+    .premium-title {
+      background: linear-gradient(135deg, #ffd700 0%, #ffae00 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      text-shadow: 
+        0 0 8px rgba(255, 215, 0, 0.5),
+        0 0 16px rgba(255, 215, 0, 0.3),
+        0 0 24px rgba(255, 215, 0, 0.2);
+      position: relative;
+      display: inline-block;
+    }
+    
+    .premium-title::after {
+      content: "";
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      background: linear-gradient(90deg, #ffd700, #ffae00);
+      border-radius: 2px;
+    }
+    
+    /* Melhorias nos botões */
+    .btn-glow:hover {
+      box-shadow: 0 0 15px rgba(245, 158, 11, 0.6);
+    }
   </style>
 </head>
-<body>
-  <div class="container">
-    <h1>Proposta 1: Site Imobiliário Básico</h1>
-    <p class="price">R$ 2.000,00</p>
-    <img src="https://cdn.pixabay.com/photo/2019/10/09/12/59/real-estate-4539321_1280.jpg" alt="Site imobiliário básico">
-    <ul>
-      <li>Site responsivo com 5 páginas principais</li>
-      <li>Cadastro de imóveis com busca básica</li>
-      <li>Formulário de contato com WhatsApp</li>
-      <li>Painel administrativo simples</li>
-      <li>Design moderno e otimizado para SEO</li>
-    </ul>
-    <p>Referência: <a href="https://www.imobzi.com.br/" target="_blank">https://www.imobzi.com.br/</a></p>
+<body class="bg-gradient-light min-h-screen">
+  <!-- Hero Background -->
+  <div class="hero-bg relative">
+    <!-- Header -->
+    <header class="relative z-10 pt-8">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="flex items-center space-x-3 text-white">
+          <div class="bg-black text-white w-14 h-14 rounded-xl flex items-center justify-center shadow-lg">
+            <i class="fas fa-crown text-xl"></i>
+          </div>
+          <span class="font-montserrat font-bold text-2xl text-shadow">RealBlackBoss</span>
+        </div>
+      </div>
+    </header>
 
-    <hr>
-
-    <h1>Proposta 2: Site Imobiliário Intermediário</h1>
-    <p class="price">R$ 5.000,00</p>
-    <img src="https://cdn.pixabay.com/photo/2018/03/02/20/59/interior-3198746_1280.jpg" alt="Site imobiliário intermediário">
-    <ul>
-      <li>Todos os recursos do pacote Básico</li>
-      <li>CRM de atendimento com kanban de leads</li>
-      <li>Dashboard com métricas de acesso</li>
-      <li>Publicação automática em redes sociais</li>
-      <li>Exportação de leads em Excel</li>
-      <li>Cadastro de categorias e tipos de imóveis</li>
-    </ul>
-    <p>Referência: <a href="https://www.jetimob.com/" target="_blank">https://www.jetimob.com/</a> | <a href="https://www.imobapp.com.br/" target="_blank">https://www.imobapp.com.br/</a></p>
-
-    <hr>
-
-    <h1>Proposta 3: Site Imobiliário Avançado</h1>
-    <p class="price">R$ 10.000,00</p>
-    <img src="https://cdn.pixabay.com/photo/2019/05/15/17/16/house-4205589_1280.jpg" alt="Site imobiliário avançado">
-    <ul>
-      <li>Todos os recursos do pacote Intermediário</li>
-      <li>Funil de vendas completo e proposta automatizada</li>
-      <li>Integração com OLX, Zap Imóveis e VivaReal via XML</li>
-      <li>Permissões por tipo de usuário (admin, corretor, gerente)</li>
-      <li>Versão mobile (PWA) para corretores</li>
-      <li>API WhatsApp com mensagens automáticas</li>
-      <li>Relatórios e exportações avançadas</li>
-    </ul>
-    <p>Referência: <a href="https://www.ingaia.com.br/" target="_blank">https://www.ingaia.com.br/</a> | <a href="https://www.vistasoft.com.br/" target="_blank">https://www.vistasoft.com.br/</a></p>
+    <!-- Hero Section -->
+    <section class="relative z-10 text-center py-16 text-white max-w-5xl mx-auto px-6">
+      <h1 class="font-montserrat font-black text-5xl md:text-6xl lg:text-7xl leading-tight mb-6 text-shadow">
+        Soluções Imobiliárias
+        <span class="block premium-title">
+          Premium de Elite
+        </span>
+      </h1>
+      <p class="text-xl md:text-2xl max-w-4xl mx-auto mb-10 opacity-90 leading-relaxed">
+        Transforme sua imobiliária com tecnologia de ponta, CRM avançado e soluções integradas para maximizar vendas e captação de clientes
+      </p>
+      <a href="#pricing" class="inline-flex items-center bg-amber-500 hover:bg-amber-600 text-white font-bold py-4 px-8 rounded-full text-lg shadow-xl btn-glow transform hover:scale-105 transition-all duration-300">
+        <i class="fas fa-rocket mr-3"></i>
+        Ver Propostas Premium
+      </a>
+    </section>
   </div>
+
+  <!-- Pricing Cards -->
+  <section id="pricing" class="max-w-7xl mx-auto px-6 -mt-20 relative z-20">
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
+      
+      <!-- Card 1: Básico -->
+      <div class="pricing-card bg-white rounded-2xl shadow-premium overflow-hidden hover:shadow-2xl transition-all duration-300 border border-gray-100">
+        <div class="p-8 text-center border-b border-gray-100">
+          <h2 class="font-montserrat font-bold text-2xl text-gray-800 mb-4">Site Imobiliário Básico</h2>
+          <div class="text-5xl font-bold text-blue-600 mb-2">R$ 2.500</div>
+        </div>
+        
+        <div class="h-48 overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
+               alt="Site imobiliário básico" class="w-full h-full object-cover hover:scale-110 transition-transform duration-300">
+        </div>
+        
+        <div class="p-8">
+          <ul class="space-y-4 mb-8">
+            <li class="flex items-center space-x-3">
+              <i class="fas fa-check-circle text-green-500 text-lg"></i>
+              <span>Site responsivo com 8 páginas principais</span>
+            </li>
+            <li class="flex items-center space-x-3">
+              <i class="fas fa-check-circle text-green-500 text-lg"></i>
+              <span>Cadastro de imóveis com busca avançada</span>
+            </li>
+            <li class="flex items-center space-x-3">
+              <i class="fas fa-check-circle text-green-500 text-lg"></i>
+              <span>Formulário de contato integrado WhatsApp</span>
+            </li>
+            <li class="flex items-center space-x-3">
+              <i class="fas fa-check-circle text-green-500 text-lg"></i>
+              <span>Painel administrativo completo</span>
+            </li>
+            <li class="flex items-center space-x-3">
+              <i class="fas fa-check-circle text-green-500 text-lg"></i>
+              <span>Design premium otimizado para SEO</span>
+            </li>
+            <li class="flex items-center space-x-3">
+              <i class="fas fa-check-circle text-green-500 text-lg"></i>
+              <span>Hospedagem premium por 1 ano inclusa</span>
+            </li>
+          </ul>
+          
+          <a href="#comparison" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition-colors duration-300 block text-center btn-glow">
+            Ver Comparação
+          </a>
+        </div>
+        
+        <div class="bg-gray-50 p-4 text-sm">
+          <strong class="text-gray-700">Referência:</strong> 
+          <a href="https://www.imobzi.com.br/" target="_blank" class="text-blue-600 hover:underline ml-1">imobzi.com.br</a>
+        </div>
+      </div>
+
+      <!-- Card 2: Intermediário -->
+      <div class="pricing-card bg-white rounded-2xl shadow-premium overflow-hidden hover:shadow-2xl transition-all duration-300 border-2 border-green-500 relative">
+        <div class="absolute top-4 right-4 bg-green-500 text-white px-4 py-2 rounded-full text-sm font-bold">
+          Mais Popular
+        </div>
+        
+        <div class="p-8 text-center border-b border-gray-100">
+          <h2 class="font-montserrat font-bold text-2xl text-gray-800 mb-4">Site Imobiliário Intermediário</h2>
+          <div class="text-5xl font-bold text-green-600 mb-2">R$ 6.500</div>
+        </div>
+        
+        <div class="h-48 overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
+               alt="Site imobiliário intermediário" class="w-full h-full object-cover hover:scale-110 transition-transform duration-300">
+        </div>
+        
+        <div class="p-8">
+          <ul class="space-y-4 mb-8">
+            <li class="flex items-center space-x-3">
+              <i class="fas fa-check-circle text-green-500 text-lg"></i>
+              <span>Todos os recursos do pacote Básico</span>
+            </li>
+            <li class="flex items-center space-x-3">
+              <i class="fas fa-check-circle text-green-500 text-lg"></i>
+              <span>CRM de atendimento com kanban de leads</span>
+            </li>
+            <li class="flex items-center space-x-3">
+              <i class="fas fa-check-circle text-green-500 text-lg"></i>
+              <span>Dashboard analítico com métricas avançadas</span>
+            </li>
+            <li class="flex items-center space-x-3">
+              <i class="fas fa-check-circle text-green-500 text-lg"></i>
+              <span>Publicação automática em redes sociais</span>
+            </li>
+            <li class="flex items-center space-x-3">
+              <i class="fas fa-check-circle text-green-500 text-lg"></i>
+              <span>Exportação de leads e relatórios em Excel</span>
+            </li>
+            <li class="flex items-center space-x-3">
+              <i class="fas fa-check-circle text-green-500 text-lg"></i>
+              <span>Gestão completa de categorias e tipos</span>
+            </li>
+            <li class="flex items-center space-x-3">
+              <i class="fas fa-check-circle text-green-500 text-lg"></i>
+              <span>Suporte técnico premium por 8 meses</span>
+            </li>
+          </ul>
+          
+          <a href="#comparison" class="w-full bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-6 rounded-lg transition-colors duration-300 block text-center btn-glow">
+            Ver Comparação
+          </a>
+        </div>
+        
+        <div class="bg-gray-50 p-4 text-sm">
+          <strong class="text-gray-700">Referências:</strong> 
+          <a href="https://www.jetimob.com/" target="_blank" class="text-blue-600 hover:underline ml-1">jetimob.com</a> | 
+          <a href="https://www.imobapp.com.br/" target="_blank" class="text-blue-600 hover:underline">imobapp.com.br</a>
+        </div>
+      </div>
+
+      <!-- Card 3: Avançado -->
+      <div class="pricing-card bg-white rounded-2xl shadow-premium overflow-hidden hover:shadow-2xl transition-all duration-300 border border-purple-500 relative">
+        <div class="absolute top-4 right-4 bg-purple-500 text-white px-4 py-2 rounded-full text-sm font-bold">
+          Premium
+        </div>
+        
+        <div class="p-8 text-center border-b border-gray-100">
+          <h2 class="font-montserrat font-bold text-2xl text-gray-800 mb-4">Site Imobiliário Avançado</h2>
+          <div class="text-5xl font-bold text-purple-600 mb-2">R$ 12.500</div>
+        </div>
+        
+        <div class="h-48 overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
+               alt="Site imobiliário avançado" class="w-full h-full object-cover hover:scale-110 transition-transform duration-300">
+        </div>
+        
+        <div class="p-8">
+          <ul class="space-y-4 mb-8">
+            <li class="flex items-center space-x-3">
+              <i class="fas fa-check-circle text-green-500 text-lg"></i>
+              <span>Todos os recursos do pacote Intermediário</span>
+            </li>
+            <li class="flex items-center space-x-3">
+              <i class="fas fa-check-circle text-green-500 text-lg"></i>
+              <span>Funil de vendas completo com automação</span>
+            </li>
+            <li class="flex items-center space-x-3">
+              <i class="fas fa-check-circle text-green-500 text-lg"></i>
+              <span>Integração OLX, Zap Imóveis e VivaReal</span>
+            </li>
+            <li class="flex items-center space-x-3">
+              <i class="fas fa-check-circle text-green-500 text-lg"></i>
+              <span>Permissões avançadas por tipo de usuário</span>
+            </li>
+            <li class="flex items-center space-x-3">
+              <i class="fas fa-check-circle text-green-500 text-lg"></i>
+              <span>App mobile PWA para corretores</span>
+            </li>
+            <li class="flex items-center space-x-3">
+              <i class="fas fa-check-circle text-green-500 text-lg"></i>
+              <span>API WhatsApp com automação completa</span>
+            </li>
+            <li class="flex items-center space-x-3">
+              <i class="fas fa-check-circle text-green-500 text-lg"></i>
+              <span>Relatórios avançados e Business Intelligence</span>
+            </li>
+            <li class="flex items-center space-x-3">
+              <i class="fas fa-check-circle text-green-500 text-lg"></i>
+              <span>Suporte VIP prioritário por 12 meses</span>
+            </li>
+          </ul>
+          
+          <a href="#comparison" class="w-full bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-6 rounded-lg transition-colors duration-300 block text-center btn-glow">
+            Ver Comparação
+          </a>
+        </div>
+        
+        <div class="bg-gray-50 p-4 text-sm">
+          <strong class="text-gray-700">Referências:</strong> 
+          <a href="https://www.ingaia.com.br/" target="_blank" class="text-blue-600 hover:underline ml-1">ingaia.com.br</a> | 
+          <a href="https://www.vistasoft.com.br/" target="_blank" class="text-blue-600 hover:underline">vistasoft.com.br</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Comparison Table -->
+    <div id="comparison" class="bg-white rounded-2xl shadow-premium p-8 mb-16">
+      <h2 class="font-montserrat font-bold text-3xl text-center text-gray-800 mb-8">
+        Comparação Detalhada dos Planos
+      </h2>
+      
+      <div class="overflow-x-auto">
+        <table class="w-full">
+          <thead>
+            <tr class="bg-gray-50">
+              <th class="px-6 py-4 text-left font-bold text-gray-800">Recurso</th>
+              <th class="px-6 py-4 text-center font-bold text-blue-600">Básico</th>
+              <th class="px-6 py-4 text-center font-bold text-green-600">Intermediário</th>
+              <th class="px-6 py-4 text-center font-bold text-purple-600">Avançado</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-gray-200">
+            <tr>
+              <td class="px-6 py-4 font-semibold">Tempo de desenvolvimento</td>
+              <td class="px-6 py-4 text-center">15 dias úteis</td>
+              <td class="px-6 py-4 text-center">20 dias úteis</td>
+              <td class="px-6 py-4 text-center">30 dias úteis</td>
+            </tr>
+            <tr class="bg-gray-50">
+              <td class="px-6 py-4 font-semibold">Número de páginas</td>
+              <td class="px-6 py-4 text-center">8 páginas</td>
+              <td class="px-6 py-4 text-center">Ilimitado</td>
+              <td class="px-6 py-4 text-center">Ilimitado</td>
+            </tr>
+            <tr>
+              <td class="px-6 py-4 font-semibold">Painel administrativo</td>
+              <td class="px-6 py-4 text-center"><i class="fas fa-check text-green-500 text-xl"></i></td>
+              <td class="px-6 py-4 text-center"><i class="fas fa-check text-green-500 text-xl"></i></td>
+              <td class="px-6 py-4 text-center"><i class="fas fa-check text-green-500 text-xl"></i></td>
+            </tr>
+            <tr class="bg-gray-50">
+              <td class="px-6 py-4 font-semibold">Integração com portais</td>
+              <td class="px-6 py-4 text-center"><i class="fas fa-times text-red-400 text-xl opacity-30"></i></td>
+              <td class="px-6 py-4 text-center"><i class="fas fa-times text-red-400 text-xl opacity-30"></i></td>
+              <td class="px-6 py-4 text-center"><i class="fas fa-check text-green-500 text-xl"></i></td>
+            </tr>
+            <tr>
+              <td class="px-6 py-4 font-semibold">CRM de atendimento</td>
+              <td class="px-6 py-4 text-center"><i class="fas fa-times text-red-400 text-xl opacity-30"></i></td>
+              <td class="px-6 py-4 text-center"><i class="fas fa-check text-green-500 text-xl"></i></td>
+              <td class="px-6 py-4 text-center"><i class="fas fa-check text-green-500 text-xl"></i></td>
+            </tr>
+            <tr class="bg-gray-50">
+              <td class="px-6 py-4 font-semibold">App mobile para corretores</td>
+              <td class="px-6 py-4 text-center"><i class="fas fa-times text-red-400 text-xl opacity-30"></i></td>
+              <td class="px-6 py-4 text-center"><i class="fas fa-times text-red-400 text-xl opacity-30"></i></td>
+              <td class="px-6 py-4 text-center"><i class="fas fa-check text-green-500 text-xl"></i></td>
+            </tr>
+            <tr>
+              <td class="px-6 py-4 font-semibold">Suporte técnico</td>
+              <td class="px-6 py-4 text-center">6 meses</td>
+              <td class="px-6 py-4 text-center">8 meses</td>
+              <td class="px-6 py-4 text-center">12 meses</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- FAQ Section -->
+    <div class="max-w-4xl mx-auto mb-16">
+      <h2 class="font-montserrat font-bold text-3xl text-center text-gray-800 mb-12">
+        Perguntas Frequentes
+      </h2>
+      
+      <div class="space-y-4">
+        <div class="faq-item bg-white rounded-xl shadow-lg overflow-hidden">
+          <div class="faq-question px-6 py-5 font-semibold cursor-pointer flex justify-between items-center hover:bg-gray-50 transition-colors duration-200">
+            <span>Quanto tempo leva para desenvolver meu site?</span>
+            <i class="fas fa-chevron-down text-gray-400 transition-transform duration-200"></i>
+          </div>
+          <div class="faq-answer px-6 pb-5 text-gray-600 hidden">
+            O tempo de desenvolvimento varia conforme o pacote escolhido: Site Básico em 15 dias úteis, Intermediário em 20 dias úteis e Avançado em 30 dias úteis. Estes prazos incluem aprovação do design, desenvolvimento, testes e treinamento da equipe.
+          </div>
+        </div>
+        
+        <div class="faq-item bg-white rounded-xl shadow-lg overflow-hidden">
+          <div class="faq-question px-6 py-5 font-semibold cursor-pointer flex justify-between items-center hover:bg-gray-50 transition-colors duration-200">
+            <span>Os valores incluem hospedagem e domínio?</span>
+            <i class="fas fa-chevron-down text-gray-400 transition-transform duration-200"></i>
+          </div>
+          <div class="faq-answer px-6 pb-5 text-gray-600 hidden">
+            <div class="mb-4">
+              <p class="mb-3"><strong>Sim!</strong> Todos os pacotes incluem hospedagem profissional por 1 ano e registro de domínio (.com.br).</p>
+              <p>Após o primeiro ano, você pode escolher entre duas opções de hospedagem:</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+              <div class="server-option bg-white border border-gray-200 rounded-xl p-5 cursor-pointer">
+                <div class="flex items-center justify-between mb-3">
+                  <h4 class="font-bold text-lg">Servidor Brasileiro</h4>
+                  <div class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-bold">Recomendado</div>
+                </div>
+                <div class="text-2xl font-bold text-blue-600 mb-2">R$ 34,90/mês</div>
+                <ul class="space-y-2 text-sm text-gray-600">
+                  <li class="flex items-start">
+                    <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                    <span>Latência baixa para o Brasil</span>
+                  </li>
+                  <li class="flex items-start">
+                    <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                    <span>Suporte local em português</span>
+                  </li>
+                  <li class="flex items-start">
+                    <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                    <span>Backup diário automático</span>
+                  </li>
+                </ul>
+              </div>
+              
+              <div class="server-option bg-white border border-gray-200 rounded-xl p-5 cursor-pointer">
+                <h4 class="font-bold text-lg mb-3">Servidor Internacional</h4>
+                <div class="text-2xl font-bold text-purple-600 mb-2">R$ 89,90/mês</div>
+                <ul class="space-y-2 text-sm text-gray-600">
+                  <li class="flex items-start">
+                    <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                    <span>Alcance global premium</span>
+                  </li>
+                  <li class="flex items-start">
+                    <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                    <span>Infraestrutura de alto desempenho</span>
+                  </li>
+                  <li class="flex items-start">
+                    <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                    <span>CDN global incluída</span>
+                  </li>
+                  <li class="flex items-start">
+                    <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                    <span>Suporte 24/7 em inglês</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            
+            <div class="bg-blue-50 p-4 rounded-lg">
+              <p class="text-blue-700"><i class="fas fa-info-circle mr-2"></i> Ambos os planos incluem:</p>
+              <ul class="list-disc list-inside text-blue-700 mt-2">
+                <li>Certificado SSL gratuito</li>
+                <li>Proteção contra DDoS</li>
+                <li>Painel de controle intuitivo</li>
+                <li>Atualizações automáticas</li>
+                <li>Pagamento mensal</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item bg-white rounded-xl shadow-lg overflow-hidden">
+          <div class="faq-question px-6 py-5 font-semibold cursor-pointer flex justify-between items-center hover:bg-gray-50 transition-colors duration-200">
+            <span>Vocês oferecem serviço de manutenção?</span>
+            <i class="fas fa-chevron-down text-gray-400 transition-transform duration-200"></i>
+          </div>
+          <div class="faq-answer px-6 pb-5 text-gray-600 hidden">
+            <div class="bg-blue-50 p-4 rounded-lg mb-4">
+              <h4 class="font-bold text-lg text-blue-800 mb-3">🔧 Manutenção e Suporte Premium | R$ 449,00/mês</h4>
+              <p class="text-blue-700 mb-3"><strong>Justificativa:</strong> Serviço premium com suporte técnico prioritário, atualizações mensais e otimizações contínuas.</p>
+            </div>
+            
+            <div class="space-y-2 mb-4">
+              <h5 class="font-semibold text-gray-800">Serviços inclusos:</h5>
+              <ul class="list-disc list-inside space-y-1 text-sm">
+                <li>Alterações de layout, banners e cadastro de imóveis</li>
+                <li>Relatórios detalhados de acessos e leads</li>
+                <li>Atualizações de segurança e backups automáticos</li>
+                <li>Monitoramento 24/7 de uptime e correções de erros</li>
+                <li>Suporte prioritário por WhatsApp e e-mail em horário comercial</li>
+                <li>Revisão e otimização de SEO mensal</li>
+                <li>Manutenção de integração com OLX, Zap, VivaReal e Meta</li>
+                <li>Atualizações de recursos conforme novas tecnologias</li>
+              </ul>
+            </div>
+            
+            <div class="bg-gray-100 p-3 rounded-lg text-sm">
+              <h5 class="font-semibold mb-2">Comparativo de mercado:</h5>
+              <p>• Jetimob cobra R$ 247/mês sem suporte personalizado</p>
+              <p>• inGaia cobra R$ 390/mês com suporte padrão</p>
+              <p class="text-green-600 font-semibold mt-2">• Nossa solução oferece suporte premium por R$ 449/mês</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="faq-item bg-white rounded-xl shadow-lg overflow-hidden">
+          <div class="faq-question px-6 py-5 font-semibold cursor-pointer flex justify-between items-center hover:bg-gray-50 transition-colors duration-200">
+            <span>Posso migrar de um plano para outro posteriormente?</span>
+            <i class="fas fa-chevron-down text-gray-400 transition-transform duration-200"></i>
+          </div>
+          <div class="faq-answer px-6 pb-5 text-gray-600 hidden">
+            Sim, é possível fazer upgrade a qualquer momento. O valor pago no plano anterior será descontado proporcionalmente do novo pacote, garantindo que você não pague duas vezes pelos mesmos recursos.
+          </div>
+        </div>
+        
+        <div class="faq-item bg-white rounded-xl shadow-lg overflow-hidden">
+          <div class="faq-question px-6 py-5 font-semibold cursor-pointer flex justify-between items-center hover:bg-gray-50 transition-colors duration-200">
+            <span>Vocês oferecem treinamento para usar o sistema?</span>
+            <i class="fas fa-chevron-down text-gray-400 transition-transform duration-200"></i>
+          </div>
+          <div class="faq-answer px-6 pb-5 text-gray-600 hidden">
+            Sim, todos os pacotes incluem treinamento completo: Básico (3 horas online), Intermediário (4 horas + manual digital) e Avançado (6 horas + manual completo + vídeo tutoriais + suporte dedicado por 30 dias).
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="contact" class="bg-gray-900 text-white">
+    <div class="max-w-7xl mx-auto px-6 py-16">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+        
+        <div>
+          <div class="flex items-center space-x-3 mb-6">
+            <div class="bg-black w-12 h-12 rounded-lg flex items-center justify-center">
+              <i class="fas fa-crown text-white text-xl"></i>
+            </div>
+            <span class="font-montserrat font-bold text-2xl">RealBlackBoss</span>
+          </div>
+          <p class="text-gray-300 mb-6 leading-relaxed">
+            Soluções digitais de elite para o mercado imobiliário. Tecnologia avançada para impulsionar seus resultados.
+          </p>
+          <div class="flex space-x-4">
+            <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-blue-600 transition-colors duration-300">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-pink-500 transition-colors duration-300">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-blue-500 transition-colors duration-300">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-green-500 transition-colors duration-300">
+              <i class="fab fa-whatsapp"></i>
+            </a>
+          </div>
+        </div>
+        
+        <div>
+          <h3 class="font-montserrat font-bold text-xl mb-6 relative">
+            Links Rápidos
+            <div class="absolute bottom-0 left-0 w-12 h-1 bg-amber-500 rounded-full"></div>
+          </h3>
+          <div class="space-y-3">
+            <a href="#pricing" class="block text-gray-300 hover:text-white transition-colors duration-300">Propostas</a>
+            <a href="#" class="block text-gray-300 hover:text-white transition-colors duration-300">Sobre Nós</a>
+            <a href="#" class="block text-gray-300 hover:text-white transition-colors duration-300">Portfólio</a>
+            <a href="#" class="block text-gray-300 hover:text-white transition-colors duration-300">Blog</a>
+            <a href="#contact" class="block text-gray-300 hover:text-white transition-colors duration-300">Contato</a>
+          </div>
+        </div>
+        
+        <div>
+          <h3 class="font-montserrat font-bold text-xl mb-6 relative">
+            Contato
+            <div class="absolute bottom-0 left-0 w-12 h-1 bg-amber-500 rounded-full"></div>
+          </h3>
+          <div class="space-y-4">
+            <div class="flex items-start space-x-3">
+              <i class="fas fa-map-marker-alt text-amber-500 mt-1"></i>
+              <span class="text-gray-300">Av. Paulista, 1000 - São Paulo/SP</span>
+            </div>
+            <div class="flex items-center space-x-3">
+              <i class="fas fa-phone text-amber-500"></i>
+              <span class="text-gray-300">(11) 9999-9999</span>
+            </div>
+            <div class="flex items-center space-x-3">
+              <i class="fas fa-envelope text-amber-500"></i>
+              <span class="text-gray-300">contato@realblackboss.com.br</span>
+            </div>
+            <div class="flex items-center space-x-3">
+              <i class="fas fa-clock text-amber-500"></i>
+              <span class="text-gray-300">Seg-Sex: 9h às 18h</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="border-t border-gray-800 mt-12 pt-8 text-center">
+        <p class="text-gray-400">
+          &copy; 2024 RealBlackBoss - Soluções Imobiliárias Digitais de Elite. Todos os direitos reservados.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // FAQ Toggle Functionality
+    document.querySelectorAll('.faq-question').forEach(question => {
+      question.addEventListener('click', () => {
+        const faqItem = question.parentElement;
+        const answer = faqItem.querySelector('.faq-answer');
+        const icon = question.querySelector('i');
+        
+        // Close all other FAQ items
+        document.querySelectorAll('.faq-item').forEach(item => {
+          if (item !== faqItem) {
+            item.querySelector('.faq-answer').classList.add('hidden');
+            item.querySelector('.faq-question i').style.transform = 'rotate(0deg)';
+          }
+        });
+        
+        // Toggle current FAQ item
+        answer.classList.toggle('hidden');
+        if (answer.classList.contains('hidden')) {
+          icon.style.transform = 'rotate(0deg)';
+        } else {
+          icon.style.transform = 'rotate(180deg)';
+        }
+      });
+    });
+    
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          window.scrollTo({
+            top: target.offsetTop - 80,
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
+
+    // Add scroll effect to pricing cards
+    window.addEventListener('scroll', () => {
+      const cards = document.querySelectorAll('.pricing-card');
+      cards.forEach(card => {
+        const cardTop = card.getBoundingClientRect().top;
+        const windowHeight = window.innerHeight;
+        
+        if (cardTop < windowHeight * 0.8) {
+          card.style.opacity = '1';
+          card.style.transform = 'translateY(0)';
+        }
+      });
+    });
+
+    // Initialize cards animation
+    document.querySelectorAll('.pricing-card').forEach(card => {
+      card.style.opacity = '0';
+      card.style.transform = 'translateY(30px)';
+      card.style.transition = 'all 0.6s ease';
+    });
+    
+    // Server selection functionality
+    document.querySelectorAll('.server-option').forEach(option => {
+      option.addEventListener('click', () => {
+        document.querySelectorAll('.server-option').forEach(o => {
+          o.classList.remove('selected');
+        });
+        option.classList.add('selected');
+      });
+    });
+  </script>
 </body>
 </html>
